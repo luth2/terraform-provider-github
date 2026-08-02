@@ -149,8 +149,8 @@ func dataSourceGithubBillingAdvancedSecurityRead(ctx context.Context, d *schema.
 			})
 		}
 		repos = append(repos, map[string]any{
-			"name":                                  r.Name,
-			"advanced_security_committers":          r.AdvancedSecurityCommitters,
+			"name":                                   r.Name,
+			"advanced_security_committers":           r.AdvancedSecurityCommitters,
 			"advanced_security_committers_breakdown": breakdown,
 		})
 	}

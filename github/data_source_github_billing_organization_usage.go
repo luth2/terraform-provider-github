@@ -127,15 +127,15 @@ func dataSourceGithubBillingOrganizationUsageRead(ctx context.Context, d *schema
 	var items []map[string]any
 	for _, item := range report.UsageItems {
 		m := map[string]any{
-			"date":           item.Date,
-			"product":        item.Product,
-			"sku":            item.SKU,
-			"quantity":       item.Quantity,
-			"unit_type":      item.UnitType,
-			"price_per_unit": item.PricePerUnit,
-			"gross_amount":   item.GrossAmount,
+			"date":            item.Date,
+			"product":         item.Product,
+			"sku":             item.SKU,
+			"quantity":        item.Quantity,
+			"unit_type":       item.UnitType,
+			"price_per_unit":  item.PricePerUnit,
+			"gross_amount":    item.GrossAmount,
 			"discount_amount": item.DiscountAmount,
-			"net_amount":     item.NetAmount,
+			"net_amount":      item.NetAmount,
 		}
 		if item.RepositoryName != nil {
 			m["repository_name"] = *item.RepositoryName
