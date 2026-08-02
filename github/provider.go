@@ -247,6 +247,7 @@ func NewProvider(version, commit string) func() *schema.Provider {
 				"github_actions_organization_workflow_permissions":                      resourceGithubActionsOrganizationWorkflowPermissions(),
 				"github_enterprise_security_analysis_settings":                          resourceGithubEnterpriseSecurityAnalysisSettings(),
 				"github_workflow_repository_permissions":                                resourceGithubWorkflowRepositoryPermissions(),
+				"github_enterprise_billing_cost_center":                                 resourceGithubEnterpriseBillingCostCenter(),
 			},
 
 			DataSourcesMap: map[string]*schema.Resource{
@@ -265,6 +266,9 @@ func NewProvider(version, commit string) func() *schema.Provider {
 				"github_actions_variables":                                              dataSourceGithubActionsVariables(),
 				"github_app":                                                            dataSourceGithubApp(),
 				"github_app_token":                                                      dataSourceGithubAppToken(),
+				"github_billing_cost_centers":                                           dataSourceGithubBillingCostCenters(),
+				"github_billing_organization_usage":                                     dataSourceGithubBillingOrganizationUsage(),
+				"github_billing_advanced_security":                                      dataSourceGithubBillingAdvancedSecurity(),
 				"github_branch":                                                         dataSourceGithubBranch(),
 				"github_branch_protection_rules":                                        dataSourceGithubBranchProtectionRules(),
 				"github_collaborators":                                                  dataSourceGithubCollaborators(),
